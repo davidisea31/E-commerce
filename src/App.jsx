@@ -7,7 +7,7 @@ function App() {
     <>
       <NavBar/>
 
-      <ItemListContainer/>
+      <ItemListContainer greeting="Soy un mensaje de prueba" />
       
     </>
   );
