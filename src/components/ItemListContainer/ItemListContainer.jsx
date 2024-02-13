@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 function ItemListContainer({ greeting }) {
-    return (
-        <div>
+let { id } = useParams();
 
-            <p>{greeting}</p>
+useEffect(() => {
+    // Lógica para cargar productos basada en el parámetro id
+    // Este efecto se ejecutará cada vez que cambie el parámetro id
+    console.log(`Cargando productos para la categoría: ${id}`);
+}, [id]);
 
-        </div>
-    );
+return (
+    <div>
+    <h2>ItemListContainer</h2>
+    <p>{greeting}</p>
+    </div>
+);
 }
 
-export default ItemListContainer
+export default ItemListContainer;
