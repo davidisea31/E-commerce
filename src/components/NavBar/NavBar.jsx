@@ -1,32 +1,32 @@
-import React from "react"
+import React from "react";
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
-
     <>
-      <h1>Persiana Jizea</h1>
+      <Link to="/">
+        <h1>Persiana Jizea</h1>
+      </Link>
 
       <ul>
         <li>
-          <a>Persiana Elegante</a>
+          <Link to="/category/1">Persiana Elegante</Link>
         </li>
         <li>
-          <a>Persiana Opaca</a>
+          <Link to="/category/2">Persiana Opaca</Link>
         </li>
         <li>
-          <a>Persiana Romana</a>
+          <Link to="/category/3">Persiana Romana</Link>
         </li>
         <li>
-          <a>Persiana Zafaro</a>
+          <Link to="/category/4">Persiana Zafaro</Link>
         </li>
       </ul>
 
-      <CartWidget/>
-
+      <CartWidget />
     </>
-
   );
-}
+};
 
 export default NavBar;
